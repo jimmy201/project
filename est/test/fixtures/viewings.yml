@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-11-09
+  time: 2013-11-09 14:32:25
+  agent_id: 1
+  buyer_id: 1
+  property_id: 1
+
+two:
+  date: 2013-11-09
+  time: 2013-11-09 14:32:25
+  agent_id: 1
+  buyer_id: 1
+  property_id: 1

@@ -1,0 +1,47 @@
+  <%= stylesheet_link_tag    "agents", :media => "all" %>  
+
+<table bgcolor="#a0e4fe"> 
+	<tr> 
+   <th>
+    <h1><font color="#00FF00" size="+1"><marquee  direction="letf" bgcolor="black"  scrollamount="1"scrolldelay="25">Call 086-123456 to arrange an appointment or go to the contact us page to e-mail us.</marquee></font></h1> 
+        
+      <H1>Recently Added Propertys</h1>
+	<table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">
+  <tr>
+    <th>Address</th>
+	<th>No of beds</th>
+	<th>Price €</th> 
+	 <th>Description</th>
+	 <th>Agent</th>
+	<th>Photo</th>
+	<th>Details</th>
+	<th>Photos</th>
+   
+    
+	 
+	
+</tr>
+
+<% @properties.each do |property| %>
+<tr>
+	<td><%= property.address %></td>
+	<td align = "center"><%= property.no_of_beds %></td>
+	<td>€<%= property.price %></td>
+	
+	<td><%= property.description %></td>
+	<td><%= property.agent.first_name %></td> 
+     <td><%= image_tag(property.photo,:size => "100x100") %></td>
+	<td><b><%= link_to 'View Details',     indexThree_path(:id => property) %></b></td>
+	<td><b><%= link_to 'View Photos',  photo_gallery_path(:id => property) %></></td>
+
+
+
+
+</tr>
+<% end %>
+</table>
+<dir align='right'><%= will_paginate @properties %></dir> <br> 
+ </td>
+  </tr>
+</table>
+

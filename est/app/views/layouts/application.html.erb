@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Est</title>
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",   "application", :media => "all" %>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js","application" %>
+<%= csrf_meta_tags %>
+</head>
+<body>  
+	<div id ="nav"> 
+
+		<ul>  <h1>Property Finders</H1> 
+		         </li>
+	   
+			<% if !signed_in? %>
+			<li><%= link_to "Agents sign in", signin_path %></li> 
+			<% else%> 
+			<li>Signed in as <%= @current_agent.first_name %><li>
+				<li><%= link_to "Sign Out", signout_path %></li>
+				<% end %>               
+				     <li><%= link_to "Mortgage Calculator",pages_path%> </li>
+				<li><%= link_to "Contact us",pages_new_path %></li> 
+				<li><%= link_to "Photo Gallery",pages_photo_gallery_path %></li> 
+				 <li><%= image_tag("logo.jpg",:size => '110x100',:align => 'right')%></li> 
+				    		   
+				<ul>  
+	                
+				</div> 
+			   
+				
+				<%= yield %>
+				<p id = "notice"><%= notice %></p>
+			</body> 
+			</html>

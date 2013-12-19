@@ -1,0 +1,38 @@
+
+<%= stylesheet_link_tag    "agents", :media => "all" %> 
+<%= form_for(@viewing) do |f| %>
+  <% if @viewing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@viewing.errors.count, "error") %> prohibited this viewing from being saved:</h2>
+
+      <ul>
+      <% @viewing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date, :id => :datepicker%>
+  </div>
+  <div class="field">
+    <%= f.label :time %><br />
+    <%= f.time_select :time, { :include_blank => ""} %>
+  </div>
+  <div class="field">
+   	 <%= f.label :agents_id %><br>
+	    <%= f.collection_select :agent_id, Agent.all, :id, :first_name, { :include_blank => ""} %> 
+  </div>
+  <div class="field">
+   	<%= f.label :property_id %><br>
+   <%= f.collection_select :property_id, Property.all, :id, :address , { :include_blank => ""}%>
+  </div>
+  <div class="field">
+     <%= f.label :Buyer_id %><br>
+	    <%= f.collection_select :buyer_id, Buyer.all, :id, :last_name,{ :include_blank => ""} %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

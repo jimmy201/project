@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Est</title>
+  <%= stylesheet_link_tag    "pages", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+</head>
+<body >
+  
+     
+ 
+    <table  bgcolor ="#d0e4fe"align ="center"cellpadding="35">
+	<tr>
+  <td><h1> Mortgage Calculator<h1></td> 
+   <td><h1>    Good or bad Neighbour<h1></td>
+	<td><h1>  Financial news<h1></td> 
+	<tr>
+		</table>  
+		
+  <table border = "3" align = "center" cellpadding="110" bgcolor="#E6E6FA"> 
+<tr>
+<td>	<!-- MORTGAGE LOAN CALCULATOR BEGIN -->
+	<script type="text/javascript">
+	mlcalc_default_calculator = 'loan';
+	mlcalc_currency_code = 'eur';
+	mlcalc_amortization = 'year_nc';
+	mlcalc_purchase_price = '300,000';
+	mlcalc_down_payment = '10';
+	mlcalc_mortgage_term = '30';
+	mlcalc_interest_rate = '4.5';
+	mlcalc_property_tax = '3,000';
+	mlcalc_property_insurance = '1,500';
+	mlcalc_pmi = '0.52';
+	mlcalc_loan_amount = '150,000';
+	mlcalc_loan_term = '15';
+	</script>
+	<script type="text/javascript">if(typeof jQuery == "undefined"){document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https:' : 'http:') + "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));mlcalc_jquery_noconflict=1;};</script><div style="font-weight:normal;font-size:9px;font-family:Tahoma;padding:0;margin:0;border:0;text-align:center;background:transparent;color:#EEEEEE;width:150px;" id="mlcalcWidgetHolder"><script type="text/javascript">document.write(unescape("%3Cscript src='" + (document.location.protocol == 'https:' ? 'https://ssl.mlcalc.com' : 'http://cdn.mlcalc.com') + "/widget-narrow.js' type='text/javascript'%3E%3C/script%3E"));</script>Powered by <a href="http://www.mlcalc.com/" style="font-weight:normal;font-size:9px;font-family:Tahoma;color:#EEEEEE;text-decoration:none;">Loan Calculator</a></div>
+	<!-- MORTGAGE LOAN CALCULATOR END -->
+</td> 
+
+
+
+<td><div id="zillow-neighbor-quiz-widget-container" style="width: 160px; height: 385px; border: 0px none; padding: 0px; margin: 0px; font: normal normal normal 8pt verdana,arial,sans-serif; text-transform: none; text-indent: 0px; line-height: 13px; background-color: #fbfbfb; letter-spacing: 0px; color: #555; overflow: hidden; text-align: center;"><div style="width:158px;height:34px;overflow:hidden;border:1px solid #c1bfc3;border-bottom: 0px none;text-align:center;"><div style="color:#3366bb;font-size:9pt;font-weight:bold;padding-top:10px;">Neighbor Quiz</div></div><div id="neighbor-quiz-iframe-container" style="width:auto;height:auto;border:1px solid #c1bfc3;overflow:hidden;"><iframe frameborder="0" height="317" style="display:block;" scrolling="no" width="158" src="http://www.zillow.com/widgets/quiz/QuizWidget.htm?did=neighbor-quiz-iframe-container&type=iframe&widgetcode=konq"></iframe></div><div style="width:158px;height:30px;border:1px solid #c1bfc3;border-top: 0px none;text-align:center;overflow:hidden;"><div style="height: 17px; padding-top: 8px;"><span id="widgetFooterLink"><a href="http://www.zillow.com/" target="_blank" style="cursor: pointer;"><img src="http://www.zillow.com/widgets/GetVersionedResource.htm?path=/static/images/logo_zillow_small.gif" style="border:0px none;" alt="Zillow Real Estate"></img></a></span></div></div></div></td> 
+
+
+
+<td><div class="mlc-objectBox" id="LatestNews">
+        <script type="text/javascript">toolId="LatestNews"</script>
+        <link rel="stylesheet" type="text/css" rev="stylesheet" href="http://widgets.mortgageloan.com/css/tool/GenerateCss.php?toolcolor=%23000000&toolbgcolor=%23FFFFFF&width=210&height=180&brbgcolor=%23E5E5E5&bordertextcolor=%23000000&toolid=LatestNews" media="print,screen"/>
+        <h2>Latest Mortgage Stories</h2>
+        <iframe id="ML-Frame" frameborder="no" src="http://widgets.mortgageloan.com/tool/mortgage/LatestNews.html" style="width:210px; height:180px;" type="text/html"></iframe>
+        <p style="background-color: #E5E5E5; text-align:center;line-height: 15px;"><a style="color: #000000; display: inline; font-family: arial,verdana,tahoma,helvetica,sans-serif; font-size: 7pt; font-style: normal; font-weight: normal; text-decoration: none;" href="http://www.mortgageloan.com/">MortgageLoan.com</a></p> </td> 
+	</tr>
+	</table>
+        </div>
+
+  
+
+
+
+   		 <table bgcolor="#d0e4fe"align ="center" border = "5" cellpadding ="10">  
+	   	
+   <th><%= link_to "Return to Home page",properties_indexTwo_path %></th>  
+
+        </table>
+ 

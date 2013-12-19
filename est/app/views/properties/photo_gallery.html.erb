@@ -1,0 +1,41 @@
+ <p id="notice"><%= notice %></p> 
+	<%= stylesheet_link_tag "agents", :media => "all" %>
+ 
+<p>
+	<p>
+    <h1>Photos of the interior of <br><br><%= @property.address %> </h1> 
+	</p>
+
+
+
+  
+
+   	<table align = "center">
+		<tr>
+  <td><%= image_tag(@property.photo,:size => "200x200") %> </td>
+    <td><%= image_tag(@property.image6,:size => "200x200") %></td>          
+  <td><%= image_tag(@property.image2,:size => "200x200") %></td> 
+</table> 
+
+   <table align = "center" >
+	<tr>
+       <td><%= image_tag(@property.image1,:size => "200x200") %></td> 
+         <td> <%= image_tag(@property.image4,:size => "200x200") %> </td>  
+       <td><%= image_tag(@property.image5,:size => "200x200") %></td>
+          	 </table >
+		</tr>
+   
+	   
+   <%= link_to "Home page",properties_indexTwo_path %> 
+
+
+
+
+
+
+
+
+ 
+
+
+

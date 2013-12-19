@@ -1,0 +1,29 @@
+
+<%= stylesheet_link_tag    "agents", :media => "all" %> 
+
+<p id="notice"><%= notice %></p> 
+
+      <table bgcolor="#d0e4fe"align ="center" border = "3" cellpadding ="1"> 
+     <th><h2><align="left"/>Details of <%= @buyer.first_name %>  <%= @buyer.last_name %> </h2></th> 
+ </table>
+<br>
+</br> 
+
+     <table bgcolor="#d0e4fe"align ="center" border = "10" cellpadding ="10">
+	                     
+         <th><%= @buyer.first_name %>  <%= @buyer.last_name %></th>      
+         <th>Email: <%= @buyer.email %></th> 
+         <th>Phone:<%= @buyer.phone %></th>
+        <th>Agent: <%= @buyer.agent.first_name%></th> 
+     
+	  </table> 
+	
+	<br>
+	</br> 
+ 
+
+
+ <table bgcolor="#d0e4fe"align ="center" border = "3" cellpadding ="10"> 
+
+       <th><%= link_to 'Back to buyers list', buyers_path %> </th>
+         </table>

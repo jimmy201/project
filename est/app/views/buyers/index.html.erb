@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag    "agents", :media => "all" %> 
+
+<h1>Listing buyers</h1>
+    <dt>
+   <dx>
+<table bgcolor="#d0e4fe"align ="center" border = "13" cellpadding ="10"> 
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Agent</th>
+    <th>Shoe buyer</th>
+    <th>Edit buyer</th>
+    <th>Delete buyer </th>
+  </tr>
+
+<% @buyers.each do |buyer| %>
+  <tr>
+    <th><%= buyer.first_name %></th>
+    <th><%= buyer.last_name %></th>
+    <th><%= buyer.email %></th>
+    <th><%= buyer.phone %></th>
+    <th><%= buyer.agent.first_name %></th>
+    <th><%= link_to 'Show', buyer %></th>
+    <th><%= link_to 'Edit', edit_buyer_path(buyer) %></th>
+    <th><%= link_to 'Destroy', buyer, confirm: 'Are you sure?', method: :delete %></th>
+  </th>
+<% end %>
+</table>
+
+<br />
+<br /> 
+<table bgcolor="#d0e4fe"align ="center" border = "3" cellpadding ="10"> 
+
+
+ <th><%= link_to 'Return to agents admin', agents_path %></th> 
+</table>

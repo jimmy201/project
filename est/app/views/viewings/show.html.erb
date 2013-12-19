@@ -1,0 +1,22 @@
+
+<%= stylesheet_link_tag    "agents", :media => "all" %>  
+
+<p id="notice"><%= notice %></p>
+
+<table  <table bgcolor="#d0e4fe"align ="center" border = "10" cellpadding ="5"> 
+	 <th><h3>Details of viewing</h3></th>
+	</table>
+	
+	<table  <table bgcolor="#d0e4fe"align ="center" border = "10" cellpadding ="10">
+
+  <th>Date:<%= @viewing.date %><th>
+  <th>Time:<%= @viewing.time %></th>
+  <th>Agent:<%= @viewing.agent.first_name %></th>
+  <th>Buyer:<%= @viewing.buyer.last_name %> </th> 
+  <th>Property:<%= @viewing.property.address %></th> 
+     </table>
+ 
+
+
+<%= link_to 'Edit', edit_viewing_path(@viewing) %> |
+<%= link_to 'Back', viewings_path %>

@@ -1,0 +1,92 @@
+<p id="notice"><%= notice %></p>  
+   
+  
+	  
+  
+	
+
+      
+
+ <%= stylesheet_link_tag    "agents", :media => "all" %>  
+
+ <table <h2>
+	<tr>
+   <td><h2>Address:<%= @property.address %></h2>  </td>
+ </tr>
+</table> 
+<table>
+	<tr>
+  <td><h2>No of bedrooms:<%= @property.no_of_beds %></h2></td>
+</tr>
+</table> 
+<table>
+	<tr>
+  <td><h2>Price €<%= @property.price %></h2></td> 
+</tr>
+</table>
+<table>
+	<tr>
+	<td><h2>Selling Agent:<%= @property.agent.first_name%></h2></td> 
+	<td><h2>Selling Agent:<%= @property.agent.id_image %></h2></td> 
+	</tr>
+	</h2></table>
+
+ 
+
+
+<p>
+  
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= image_tag(@property.photo,:size => "100x100") %>
+
+</p>
+
+
+<p>
+  <b>Description:</b>
+  <%= @property.description %>
+</p>
+
+<p>
+ 
+</p>  
+<p>
+  <b>Address:</b>
+  <%= @property.address %>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=300x250&sensor=false&zoom=16&markers=#{@property.latitude}%2C#{@property.longitude}" %>
+
+</p>
+
+ <table align ="center" >
+	<tr> 
+	   <td> <h1>Make an Appointment</h1></td> 
+	</tr>
+	</table> 
+	
+	
+	<table align ="center" border ="5">
+<td><form action="MAILTO:jimmymcginley@hotmail.com" method="post" enctype="text/plain">
+Your Name:<br>
+<input type="text" name="name" value=""><br>
+Your E-mail:<br>
+<input type="text" name="mail" value=""><br>
+Message:I woult like to make an appointment to 
+view: <b>
+ <p><%= @property.address %> </p> 
+
+<input type="submit" value="Send">
+<input type="reset" value="Reset"> 
+</form>   </td> 
+
+ 
+  
+     
+    <table>
+   <td><%= link_to "Home page",properties_indexTwo_path %> </td> 
+</table>
+     
+
+

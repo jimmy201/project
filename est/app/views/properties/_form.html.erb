@@ -1,0 +1,75 @@
+ <%= stylesheet_link_tag    "agents", :media => "all" %>  
+
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div> 
+<div class="field">
+    <%= f.label :image1 %><br />
+    <%= f.text_field :image1 %>
+  </div> 
+<div class="field">
+    <%= f.label :image1 %><br />
+    <%= f.text_field :image2 %>
+  </div>
+<div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+<div class="field">
+    <%= f.label :image1 %><br />
+    <%= f.text_field :image4 %>
+  </div>
+<div class="field">
+    <%= f.label :image1 %><br />
+    <%= f.text_field :image5 %>
+  </div>
+<div class="field">
+    <%= f.label :image1 %><br />
+    <%= f.text_field :image6 %>
+  </div>
+
+
+ 
+ 
+
+  <div class="field">
+    <%= f.label :no_of_beds %><br />
+    <%= f.select:no_of_beds,["1","2","3","4","5"] %>
+  </div> 
+
+	
+	
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+   	<%= f.label :agent%><br>
+	     <%= f.collection_select :agent_id, Agent.all, :id, :first_name ,{ :include_blank => ""}%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

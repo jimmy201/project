@@ -1,0 +1,39 @@
+<h1><div align="center">Contact us</div></h1>
+
+ <!DOCTYPE html>
+<html>
+<body> <p>
+	     <%= stylesheet_link_tag    "pages", :media => "all" %>  
+	  <li><%= image_tag("shop.jpg",:size => '300x300',:align => 'right')%></li>  <div>
+
+	
+	<h2>Opening Hours</h2>   
+   
+	<h4>Mon-Fri 9-1pm and 2-5pm.</h4>
+	<h4>Saturday 9-12pm. </h4> 
+	<h4>Sun/Bank Holidays closed.</h4>
+	                                        
+	
+   <h3>Call us at 0800 82 85 85</h3>
+<h3>Send us an e-mail to arrange a Viewing:</h3>
+        
+
+<form action="MAILTO:jimmymcginley@hotmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name" value=""><br>
+E-mail:<br>
+<input type="text" name="mail" value=""><br>
+Comment:<br>
+<input type="text" name="comment" value="" size="50"><br><br> 
+
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>    
+
+  	<table bgcolor="#d0e4fe"align ="center" border = "5" cellpadding ="10">  
+ 	
+<th><%= link_to "Return to Home page",properties_indexTwo_path %></th>  
+
+  </table>
+</body>
+</html>

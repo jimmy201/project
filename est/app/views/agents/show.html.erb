@@ -1,0 +1,59 @@
+
+
+
+<%= stylesheet_link_tag "agents", :media => "all" %>
+
+
+
+<p id="notice"><%= notice %></p>
+
+
+<table align ="center">
+	<tr>
+		<td><%= image_tag(@agent.id_image,:size => "200x200") %></td>
+	</tr>
+</table>
+
+<table align ="center">
+	<tr>
+		<td><h1>Agent Name:<%= @agent.first_name %></h1>
+			<td><h1><%= @agent.last_name %></td></h1>
+		</tr> 		
+	</table>
+	
+	<td><h1><%= @agent.email %></h1></td>
+	<td><h1>phone:<%= @agent.phone %></h1></td>
+</tr>
+</table>
+<br>
+</br>
+
+
+
+
+<% if !@agent.properties.empty? %>
+<b><h1>Propertys this agent is showing :</h1>
+	<% @agent.properties.each do |b| %>
+	<h1><%= link_to b.address,b %> </h1>
+	<%end%>
+	<% else %>
+	<h1>This agent has no properties to show</h1></p>
+	<% end %>
+
+	<table align ="center">
+		<tr>
+		   
+
+			<table align ="center">
+				<td><h2><%= link_to 'Back to agents admin page ', agents_path %></h2></td>
+
+			   
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+<%= stylesheet_link_tag    "agents", :media => "all" %> 
+<h1>List viewings</h1>
+
+<table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">
+
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Agent</th>
+    <th>Buyer</th>
+    <th>Property</th>
+    <th>Show viewing</th>
+    <th>Edit this viewing</th>
+    <th>Delete this viewing</th>
+  </tr>
+
+<% @viewings.each do |viewing| %>
+  <tr>
+    <th><%= viewing.date %></th>
+    <th><%= viewing.time %></th>
+    <th><%= viewing.agent.first_name%></th>
+    <th><%= viewing.buyer.last_name %></th>
+    <th><%= viewing.property.address %></th>
+    <th><%= link_to 'Show', viewing %></th>
+    <th><%= link_to 'Edit', edit_viewing_path(viewing) %></th>
+    <th><%= link_to 'Destroy', viewing, confirm: 'Are you sure?', method: :delete %></th>
+  </tr>
+<% end %>
+</table>
+
+<br />
+  <table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">
+		<th><%= link_to 'Return to Agents Admin Page', agents_path %></th> 
+	 
+	</table>

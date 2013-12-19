@@ -1,0 +1,47 @@
+   <%= stylesheet_link_tag    "agents", :media => "all" %>  
+
+
+<h1>Edit Property Listings</h1> 
+
+   
+    <dt>  
+ <table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">  
+  <tr>
+    <th>Address</th>
+    <th>No of beds</th>
+    <th>Price €</th>
+    <th>Photo</th>
+    <th>Description</th>
+    <th>Agent</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+   
+<% @properties.each do |property| %>
+  <tr>
+    <td><%= property.address %></td>
+    <td><%= property.no_of_beds %></td>
+    <td><%= property.price %></td>
+   <td><%= image_tag(property.photo,:size => "50x50") %></td>
+    <td><%= property.description %></td>
+    <td><%= property.agent_id %></td>
+    <td><%= link_to 'Show', property %></td>
+    <td><%= link_to 'Edit', edit_property_path(property) %></td>
+    <td><%= link_to 'Destroy', property, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br /> 
+<table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">  
+  <tr>
+        
+			<th><%= link_to 'Return to Agents Admin Page', agents_path %></th> 
+			
+			</tr> 
+			</table>
+   <%= will_paginate @properties %>
+
+ 
+  

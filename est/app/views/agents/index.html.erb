@@ -1,0 +1,45 @@
+
+<%= stylesheet_link_tag "agents", :media => "all" %>
+<h1><div align ="center">Agent Admin Page</div></h1>
+<dt>
+	<h2><%= render partial: 'properties/search' %></h2>
+	<table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">
+		<br>
+	</br>
+
+	<tr>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	<% @agents.each do |agent| %>
+	<tr>
+		<td><%= agent.first_name %></td>
+		<td><%= agent.last_name %></td>
+		<td><%= agent.email %></td>
+		<td><%= agent.phone %></td>
+		<td><%= link_to 'Show Agent Profile', agent %></td>
+		<td><%= link_to 'Edit Agents Profile', edit_agent_path(agent) %></td>
+		<td><%= link_to 'Remove Agent', agent, confirm: 'Are you sure?', method: :delete %></td>
+
+		<% end %>
+	</tr>
+</table>
+
+<br />
+</tr>
+<table bgcolor="#d0e4fe"align ="center" border = "15" cellpadding ="10">
+
+	<th><%= link_to 'Create a New Agent', new_agent_path %></th>
+	<th><%= link_to "Create a property", new_property_path %></th>
+	<th><%= link_to "Create a buyers", new_buyer_path %></th>
+	<th><%= link_to "Create a viewings", new_viewing_path %></th>
+	<th><%= link_to 'Return to property page', properties_path %></th>
+</tr>
+</table>
+       

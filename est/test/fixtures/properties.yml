@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: MyString
+  no_of_beds: MyString
+  price: 9.99
+  photo: MyString
+  description: MyText
+  agent_id: 1
+
+two:
+  address: MyString
+  no_of_beds: MyString
+  price: 9.99
+  photo: MyString
+  description: MyText
+  agent_id: 1
